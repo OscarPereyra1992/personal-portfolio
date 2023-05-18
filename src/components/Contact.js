@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 
+
+
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -40,7 +42,7 @@ export const Contact = () => {
     } else {
       setStatus({
         success: false,
-        message: "Oh no! Tu mensaje no se envió.",
+        message: "Oh no! your messagge is not sending.",
       });
     }
   };
@@ -90,7 +92,7 @@ export const Contact = () => {
                 </Col>
                 <Col>
                   <textarea
-                    rows="6"
+                    row="6"
                     value={formDetails.message}
                     placeholder="Mensaje"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
