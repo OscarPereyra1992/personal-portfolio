@@ -76,11 +76,3 @@ export const Banner = () => {
 };
 
 
-let prueba = "install";
-console.log(prueba);
-
-function mostrar(prueba){
-  console.log(prueba)
-}
-
-mostrar(prueba);
