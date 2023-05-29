@@ -28,7 +28,24 @@ export const Projects = () => {
       imgUrl: projImg3,
       link: "https://example.com/project3"
     },
-    // ...
+    {
+      title: "UI Desing",
+      description: "Desing with React & Tailwind",
+      imgUrl: projImg1,
+      link: "https://oscarpereyra1992.github.io/vite-deploy/"
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg2,
+      link: "https://example.com/project2"
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg3,
+      link: "https://example.com/project3"
+    },
   ];
 
   return (
