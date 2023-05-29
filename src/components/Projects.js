@@ -20,31 +20,26 @@ export const Projects = () => {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
-      link: "https://example.com/project2"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
-      link: "https://example.com/project3"
     },
     {
-      title: "UI Desing",
-      description: "Desing with React & Tailwind",
+      title: "Business Startup",
+      description: "Design & Development",
       imgUrl: projImg1,
-      link: "https://oscarpereyra1992.github.io/vite-deploy/"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
-      link: "https://example.com/project2"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
-      link: "https://example.com/project3"
     },
   ];
 
@@ -55,36 +50,43 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                  <h2>Projects</h2>
-                  <p>Ejemplos de proyectos que he realizado</p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="" id="pills-tab">
-                      
-                     
-                    </Nav>
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {
-                            projects.map((project, index) => (
-                              <a key={index} href={project.link}>
-                                <ProjectCard {...project} />
-                              </a>
-                            ))
-                          }
-                        </Row>
-                      </Tab.Pane>
-                      {/* ... */}
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>}
+              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+                <h2>Projects</h2>
+                <p>Ejemplos de proyectos que he realizado</p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                  <Nav variant="pills" className="" id="pills-tab">
+                  
+                   
+                  </Nav>
+                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Tab.Pane eventKey="first">
+                      <Row>
+                        {
+                          projects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="section">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
+              </div>}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background Image"></img>
+      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   )
 }
-
