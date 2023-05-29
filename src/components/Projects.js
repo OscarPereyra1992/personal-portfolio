@@ -61,13 +61,16 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                      {
-                            projects.map((project, index) => (
-                              <a key={index} href={project.link}>
-                                <ProjectCard {...project} />
-                              </a>
-                            ))
-                          }
+                        {
+                          projects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
