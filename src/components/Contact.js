@@ -34,7 +34,16 @@ export const Contact = () => {
       },
       body: JSON.stringify(formDetails),
     });
-    let result = await response.json();
+    let result;
+    try {
+      const textResponse = await response.text();
+      result = JSON.parse(textResponse);
+    } catch (error) {
+      result = {
+        code: 500,
+        message: "Error parsing response.",
+      };
+    }
     setButtonText("Send");
     setFormDetails(formInitialDetails);
     if (result.code === 200) {
@@ -42,11 +51,10 @@ export const Contact = () => {
     } else {
       setStatus({
         success: false,
-        message: "Oh no! your messagge is not sending.",
+        message: result.message || "Oh no! your message is not sending.",
       });
     }
   };
-
   return (
     <section className="contact" id="connect">
       <Container>
