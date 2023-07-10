@@ -64,7 +64,7 @@ export const Contact = () => {
           </Col>
           <Col md={6}>
             <h2>Contacto</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-netlify="true">
               <Row>
                 <Col sm={6} className="px-1">
                   <input
