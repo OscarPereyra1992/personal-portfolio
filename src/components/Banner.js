@@ -60,7 +60,7 @@ export const Banner = () => {
             <p>
               Soy un Desarrollador Front-End apasionado por el diseño de interfaces y la creación de Apps.
             </p>
-            <button onClick={()=> window.location.href = '#connect'}>
+            <button onClick={()=>  href="mailto:oscarpereyra.mhs@gmail.com?Subject=Interesado%20en%20tu%20servicios"}>
               Hablemos! <ArrowRightCircle size={25} />
             </button>
             </div>}
